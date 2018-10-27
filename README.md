@@ -34,7 +34,7 @@ const gfm = require('remark-preset-gfm')
 const markdownHtml = remark()
   .use(gfm)
   .use(html)
-  .processAsync('markdown text')
+  .processSync('markdown text')
   .toString()
 
 const htmlOutput = `
