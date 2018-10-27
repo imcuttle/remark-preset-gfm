@@ -24,7 +24,7 @@ describe('remarkPresetGfm', function() {
     expect(
       remark()
         .use(gfm)
-        // .use(html)
+        .use(html)
         .use(require('../strip-position'))
         .processSync(read('autolink-headings.md'))
         .toString()
