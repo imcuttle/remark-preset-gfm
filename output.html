@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>remark-preset-gfm Example</title>
+  <link rel="stylesheet" href="//unpkg.com/github-markdown-css">
+  <link rel="stylesheet" href="//unpkg.com/highlight.js/styles/github.css">
+  <style>
+    .markdown-body {
+      max-width: 65%;
+      margin: 40px auto 30px;
+    }
+    @media screen and (max-width: 1200px) {
+      .markdown-body {
+        max-width: 78%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .markdown-body {
+        max-width: 90%;
+        margin: 20px auto 10px;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .markdown-body {
+        max-width: 98%;
+        margin: 20px auto 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="markdown-body">
+  <h1 id="remark-preset-gfm"><a href="#remark-preset-gfm" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>remark-preset-gfm</h1>
+<p><a href="https://travis-ci.org/imcuttle/remark-preset-gfm"><img src="https://img.shields.io/travis/imcuttle/remark-preset-gfm/master.svg?style=flat-square" alt="Build status"></a>
+<a href="https://codecov.io/github/imcuttle/remark-preset-gfm?branch=master"><img src="https://img.shields.io/codecov/c/github/imcuttle/remark-preset-gfm.svg?style=flat-square" alt="Test coverage"></a>
+<a href="https://www.npmjs.com/package/remark-preset-gfm"><img src="https://img.shields.io/npm/v/remark-preset-gfm.svg?style=flat-square" alt="NPM version"></a>
+<a href="https://www.npmjs.com/package/remark-preset-gfm"><img src="https://img.shields.io/npm/dm/remark-preset-gfm.svg?style=flat-square&#x26;maxAge=43200" alt="NPM Downloads"></a>
+<a href="https://prettier.io/"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Prettier"></a>
+<a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square" alt="Conventional Commits"></a></p>
+<p>remark preset for gfm</p>
+<h2 id="installation"><a href="#installation" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<pre><code class="hljs language-bash">npm install remark-preset-gfm
+<span class="hljs-comment"># or use yarn</span>
+yarn add remark-preset-gfm</code></pre>
+<h2 id="usage"><a href="#usage" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">import</span> remarkPresetGfm <span class="hljs-keyword">from</span> <span class="hljs-string">'remark-preset-gfm'</span></code></pre>
+<h2 id="contributing"><a href="#contributing" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contributing</h2>
+<ul>
+<li>Fork it!</li>
+<li>Create your new branch:<br>
+<code>git checkout -b feature-new</code> or <code>git checkout -b fix-which-bug</code></li>
+<li>Start your magic work now</li>
+<li>Make sure npm test passes</li>
+<li>Commit your changes:<br>
+<code>git commit -am 'feat: some description (close #123)'</code> or <code>git commit -am 'fix: some description (fix #123)'</code></li>
+<li>Push to the branch: <code>git push</code></li>
+<li>Submit a pull request :)</li>
+</ul>
+<h2 id="authors"><a href="#authors" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authors</h2>
+<p>This library is written and maintained by imcuttle, moyuyc95@gmail.com.</p>
+<h2 id="license"><a href="#license" class="anchor"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+<p>MIT - <a href="https://github.com/imcuttle">imcuttle</a> 🐟</p>
+</div>
+</body>
+</html>
