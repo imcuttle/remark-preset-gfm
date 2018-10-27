@@ -1,6 +1,6 @@
 {
   "name": "remark-preset-gfm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "Remark preset for gfm",
   "author": "imcuttle <moyuyc95@gmail.com>",
